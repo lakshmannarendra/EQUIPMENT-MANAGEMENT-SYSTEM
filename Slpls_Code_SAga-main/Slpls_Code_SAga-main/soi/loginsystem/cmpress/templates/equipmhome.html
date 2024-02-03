@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EMS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'equipmstyle.css'%}">
+    <style>
+        /* Additional inline CSS for custom modifications */
+        .sportsboxleft, .labboxright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sportsboxleft::after, .labboxright::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(255,255,255,0.8));
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+
+        .sportsboxleft:hover::after, .labboxright:hover::after {
+            transform: translateY(0);
+        }
+
+        .mainheadinbox {
+            margin: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="eqhome1">
+    <div class="headereq1">
+        EQUIPMENT MANAGEMENT SYSTEM
+    </div>
+<div style="background-image: url('https://payload105.cargocollective.com/1/4/140568/4409355/shapesquare.gif');"
+    <div class="belowheaddiv1 d-flex flex-column justify-content-center align-items-center">
+        <div class="insidethebigdiv1 d-flex flex-row">
+            <a href="/sports" class="sportsboxleft inline card text-center" onmouseover="changeText(this, 'Click here to get the sports equipment details', 'Sports')" onmouseout="revertText(this, 'Sports')">
+                <div class="card-body">
+                    <h5 class="card-title mainheadinbox">Sports</h5>
+                </div>
+            </a>
+            <a href="#" class="labboxright inline card text-center" onmouseover="changeText(this, 'Click here to get the lab equipment details', 'Lab')" onmouseout="revertText(this, 'Lab')">
+                <div class="card-body">
+                    <h5 class="card-title mainheadinbox">Lab</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function changeText(element, newText, oldText) {
+            element.querySelector('.mainheadinbox').textContent = newText;
+        }
+
+        function revertText(element, oldText) {
+            element.querySelector('.mainheadinbox').textContent = oldText;
+        }
+    </script>
+</body>
+</html>

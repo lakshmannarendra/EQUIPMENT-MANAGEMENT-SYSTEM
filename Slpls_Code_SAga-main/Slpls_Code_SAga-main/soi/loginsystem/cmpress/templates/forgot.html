@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EMS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="{%static 'forgot.css'%}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Forgot Password</h2>
+        <p>Please enter your email address to reset your password.</p>
+        <form action='/for_to_otp' method='post'>
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <button type="submit">Reset Password</button>
+        </form>
+        <p id="message" class="hidden"></p>
+    </div>
+    </form>
+
+    <script src="{%static 'forgot.js'%}"></script>
+</body>
+</html>

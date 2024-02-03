@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EMS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="{%static 'change_pwd.css'%}">
+</head>
+<body>
+    <div class="container">
+        <h2>Reset Password</h2>
+        <form action='/loginnext' method='post'>
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="password" id="newPassword" name="newPassword" placeholder="New Password" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit">Reset Password</button>
+        </form>
+        <p id="message" class="hidden"></p>
+    </div>
+
+    <script src="{%static 'change_pwd.js'%}"></script>
+</body>
+</html>

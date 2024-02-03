@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EMS</title>
+    <style>
+        /* relevant portion */
+button {
+	--border-radius: 24px;
+	--border-width: 8px;
+
+	-webkit-appearance: none;
+
+	   -moz-appearance: none;
+
+	        appearance: none;
+	position: relative;
+	padding: 0.8em 1.6em; /* Decreased size of the button */
+	border: 0;
+	background-color: transparent;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.5em;
+	font-weight: 600;
+    text-align: center;
+    justify-content: center;
+	color: aliceblue;
+}
+
+button::after {
+	--m-i: linear-gradient(#000, #000);
+	--m-o: content-box, padding-box;
+
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 80%;
+	padding: var(--border-width);
+	border-radius: var(--border-radius);
+	background-image: conic-gradient(
+		#488cfb,
+		#29dbbc,
+		#ddf505,
+		#ff9f0e,
+		#e440bb,
+		#655adc,
+		#488cfb
+	);
+
+	-webkit-mask-image: var(--m-i), var(--m-i);
+
+	        mask-image: var(--m-i), var(--m-i);
+	-webkit-mask-origin: var(--m-o);
+	        mask-origin: var(--m-o);
+	-webkit-mask-clip: var(--m-o);
+	        mask-clip: var(--m-o);
+	mask-composite: exclude;
+	-webkit-mask-composite: destination-out;
+
+	filter: hue-rotate(0);
+	-webkit-animation: hue linear 500ms infinite;
+	        animation: hue linear 500ms infinite;
+	-webkit-animation-play-state: paused;
+	        animation-play-state: paused;
+}
+
+button:hover::after {
+	-webkit-animation-play-state: running;
+	        animation-play-state: running;
+}
+
+@-webkit-keyframes hue {
+	to {
+		filter: hue-rotate(1turn);
+	}
+}
+
+@keyframes hue {
+	to {
+		filter: hue-rotate(1turn);
+	}
+}
+
+/* to have things in good shape */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+    color: aliceblue;
+}
+
+body {
+	display: grid;
+	place-items: center;
+}
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Align items to the center */
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.2em; /* Increased font size */
+        }
+        select, input[type="text"], input[type="datetime-local"] {
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+            opacity: 60%;
+            font-size: 1.2em; /* Increased font size */
+            border: 2px solid #000; /* Added border */
+            border-radius: 5px; /* Made border rounded */
+            border-style: solid; /* Added solid border style */
+            padding-left: 1%;
+        }
+         /* Add your styles here */
+         .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleForms() {
+            var form1 = document.getElementById('form1');
+            var form2 = document.getElementById('form2');
+            if (form1.style.display === 'none') {
+                form1.style.display = 'block';
+                form2.style.display = 'none';
+            } else {
+                form1.style.display = 'none';
+                form2.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body style=" background-image:url('https://i.gifer.com/1Fvo.gif');
+
+background-position:center;">
+    <button onclick="toggleForms()">Change Forms</button>
+
+    <div id="form1">
+        <!-- Insert your first form here -->
+        <form action="/borrow" method="POST">
+            {% csrf_token %}
+            <h1 style="text-align: center;">Borrowing Form:</h1>
+            <label for="inputText1">No.of Items required:</label>
+            <input type="text" id="inputText1" name="inputText1" required>
+            <br>
+            <label for="dateTime1">Date and Time of Borrowing:</label>
+            <input type="datetime-local" style="margin-bottom: 5%;" id="dateTime1" name="dateTime1" required>
+            <br>
+            <label for="dateTime3">Date and Time of Returning:</label>
+            <input type="datetime-local" style="margin-bottom: 10%;" id="dateTime3" name="dateTime3" required>
+            <br>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <div id="form2" class="hidden">
+        <!-- Insert your second form here -->
+        <form action="/returning" method="POST">
+            											{% csrf_token %}
+
+            <h1 style="text-align: center;">Returning Form:</h1>
+            <label for="inputText2">No.of Items Being Returned:</label>
+            <input type="text" id="inputText2" name="inputText2" required>
+            <br>
+            <label for="dateTime2">Date and Time of Borrowing:</label>
+            <input type="datetime-local" style="margin-bottom: 5%;" id="dateTime2" name="dateTime2" required>
+            <br>
+            <label for="dateTime4">Date and Time of Returning:</label>
+            <input type="datetime-local" style="margin-bottom: 10%;" id="dateTime4" name="dateTime4" required>
+            <br>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

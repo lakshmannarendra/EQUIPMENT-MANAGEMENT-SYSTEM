@@ -1,0 +1,125 @@
+.eqhome1 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c5f0f5;
+}
+
+.headereq1 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.belowheaddiv1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sportsboxleft,
+.labboxright {
+    position: relative;
+    border-style: solid;
+    border-width: 3px;
+    padding: 20px;
+    border-radius: 5px;
+    height: 350px;
+    width: 400px;
+    margin: 5px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Adjust the blur amount here */
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.sportsboxleft::before,
+.labboxright::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 16px;
+}
+
+.mainheadinbox {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inline {
+    display: inline-block;
+}
+.sportsboxleft::before,
+.labboxright::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 16px;
+}
+.sportsboxleft:hover,
+.labboxright:hover {
+    color: #0056b3;
+}
+
+.sportsboxleft:hover,
+.labboxright:hover {
+    color: #0056b3;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sportsboxleft p.desoop,
+.labboxright p.desoop {
+    margin: 10px 0 20px;
+    padding-top: 150px;
+    color: #fffafa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+p {
+    padding: 200px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.topitem {
+    align-self: flex-start;
+}
+/* Background image for Lab box */
+.labboxright {
+    background-image: url('https://i.pinimg.com/originals/cb/7e/f2/cb7ef26e157572c44cc84f88e92e5149.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.sportsboxleft {
+    background-image: url('https://cdn.dribbble.com/users/1241808/screenshots/5516684/media/a9f515fbf8565b6782fafbafa7616142.gif');
+    background-size: cover;
+    background-position: center;
+}

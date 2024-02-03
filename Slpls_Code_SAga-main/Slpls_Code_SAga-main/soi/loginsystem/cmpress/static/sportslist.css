@@ -1,0 +1,481 @@
+/* Existing styles remain unchanged */
+
+/* Move the styles for .thetophead to the top */
+.thetophead {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    height: 50%;
+    background-image: radial-gradient(
+        ellipse 50% 35% at 50% 50%,
+        var(--main3),
+        transparent
+    );
+    margin-top: 10px;
+    transform: translate(-50%, -50%);
+    letter-spacing: 25;
+    left: 50%;
+    top: 50%;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 3em;
+    color: var(--white);
+    text-shadow: 0 0 0.6rem var(--white), 0 0 1.5rem var(--main2),
+        -0.2rem 0.1rem 1rem var(--main2), 0.2rem 0.1rem 1rem var(--main2),
+        0 -0.5rem 2rem var(--main), 0 0.5rem 3rem var(--main);
+    animation: glow 2s forwards, flicker 3s infinite;
+}
+@keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: var(--white);
+      text-shadow: 0 0 0.6rem var(--white), 0 0 1.5rem var(--main2),
+        -0.2rem 0.1rem 1rem var(--main2), 0.2rem 0.1rem 1rem var(--main2),
+        0 -0.5rem 2rem var(--main), 0 0.5rem 3rem var(--main);
+    }
+    28%,
+    33% {
+      color: var(--main2);
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: var(--main);
+      text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: glow 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: glow 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes glow {
+    0% {
+      color: var(--main3);
+      text-shadow: none;
+    }
+    100% {
+      color: var(--white);
+      text-shadow: 0 0 0.6rem var(--white), 0 0 1.5rem var(--main2),
+        -0.2rem 0.1rem 1rem var(--main2), 0.2rem 0.1rem 1rem var(--main2),
+        0 -0.5rem 2rem var(--main), 0 0.5rem 3rem var(--main);
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+  
+    4% {
+      opacity: 0.9;
+    }
+  
+    6% {
+      opacity: 0.85;
+    }
+  
+    8% {
+      opacity: 0.95;
+    }
+  
+    10% {
+      opacity: 0.9;
+    }
+  
+    11% {
+      opacity: 0.922;
+    }
+  
+    12% {
+      opacity: 0.9;
+    }
+  
+    14% {
+      opacity: 0.95;
+    }
+  
+    16% {
+      opacity: 0.98;
+    }
+  
+    17% {
+      opacity: 0.9;
+    }
+  
+    19% {
+      opacity: 0.93;
+    }
+  
+    20% {
+      opacity: 0.99;
+    }
+  
+    24% {
+      opacity: 1;
+    }
+  
+    26% {
+      opacity: 0.94;
+    }
+  
+    28% {
+      opacity: 0.98;
+    }
+  
+    37% {
+      opacity: 0.93;
+    }
+  
+    38% {
+      opacity: 0.5;
+    }
+  
+    39% {
+      opacity: 0.96;
+    }
+  
+    42% {
+      opacity: 1;
+    }
+  
+    44% {
+      opacity: 0.97;
+    }
+  
+    46% {
+      opacity: 0.94;
+    }
+  
+    56% {
+      opacity: 0.9;
+    }
+  
+    58% {
+      opacity: 0.9;
+    }
+  
+    60% {
+      opacity: 0.99;
+    }
+  
+    68% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.9;
+    }
+  
+    72% {
+      opacity: 0.95;
+    }
+  
+    93% {
+      opacity: 0.93;
+    }
+  
+    95% {
+      opacity: 0.95;
+    }
+  
+    97% {
+      opacity: 0.93;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  body {
+    font-family: "Inter", sans-serif;
+    max-width: 55rem;
+    padding: 2rem 1.5rem;
+    margin: 0 auto;
+    color: #241623;
+    background: url('https://img.freepik.com/premium-photo/blurred-colorful-wallpaper-background_976742-179.jpg') center center fixed; /* Replace 'your-image-url.jpg' with the actual URL of your image */
+    background-size: cover;
+}
+
+.iop p{
+    position: relative;
+    text-align : center;
+    margin-top: -25px;
+    font-size: 20px;
+    font-family: "Poppins", cursive;
+    text-shadow: 
+    0 0 5px rgb(243, 208, 11),
+    0 0 10px rgb(243, 208, 11),
+    0 0 20px rgb(243, 208, 11),
+    0 0 40px rgb(243, 208, 11),
+    0 0 80px rgb(243, 208, 11);
+    animation: iop 3s ease-in-out infinite;
+}
+@keyframes iop {
+    50% {
+        text-shadow: 
+        0 0 35px rgb(72, 255, 0),
+        0 0 50px rgb(243, 208, 11),
+        0 0 20px rgb(243, 208, 11),
+        0 0 40px rgb(243, 208, 11),
+        0 0 80px rgb(243, 208, 11);
+    }
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 2.7rem;
+    max-width: 20ch;
+}
+
+p {
+    max-width: 60ch;
+}
+
+a {
+    color: currentcolor;
+}
+
+  /* Utilities */
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 14rem), 1fr)
+    );
+    grid-gap: var(--auto-grid-gap, 0);
+    padding: 0;
+}
+
+  .flow > * + * {
+    margin-top: var(--flow-space, 1em);
+}
+
+  /* Composition */
+.team {
+    --flow-space: 2em;
+}
+
+/* Blocks */
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    aspect-ratio: 1/1;
+    position: relative;
+    padding: 1.5rem;
+    color: #ffffff;
+    backface-visibility: hidden;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.profile::before,
+.profile::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /*inset: 0;*/
+    top: 0;
+    left: 0;
+    }
+
+.profile::before {
+    background: linear-gradient(
+        to top,
+        hsla(0, 0%, 6%, 0.79) 0%,
+        hsla(0, 0%, 0%, 0.787) 7.8%,
+        hsl(0 0% 0% / 0.779) 14.4%,
+        hsl(0 0% 0% / 0.765) 20.2%,
+        hsl(0 0% 0% / 0.744) 25.3%,
+        hsl(0 0% 0% / 0.717) 29.9%,
+        hsl(0 0% 0% / 0.683) 34.3%,
+        hsl(0 0% 0% / 0.641) 38.7%,
+        hsl(0 0% 0% / 0.592) 43.3%,
+        hsl(0 0% 0% / 0.534) 48.4%,
+        hsl(0 0% 0% / 0.468) 54.1%,
+        hsl(0 0% 0% / 0.393) 60.6%,
+        hsl(0 0% 0% / 0.31) 68.3%,
+        hsl(0 0% 0% / 0.216) 77.3%,
+        hsl(0 0% 0% / 0.113) 87.7%,
+        hsla(0, 20%, 4%, 0) 100%
+    );
+    transition: 300ms opacity linear;
+}
+
+.profile::after {
+    background: linear-gradient(
+    45deg,
+    hsla(330, 97%, 63%, 0.7) 0,
+    hsla(251, 74%, 49%, 0.932) 100%
+    );
+    opacity: 0;
+    transition: 300ms opacity linear;
+}
+
+  .profile > * {
+    z-index: 1;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: -1;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: filter 200ms ease, transform 250ms linear;
+  }
+  
+  .profile h2,
+  .profile p {
+    transform: translateY(2ex);
+  }
+  
+  .profile h2 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 0.03ch;
+    transition: 300ms transform ease;
+  }
+  
+  .profile p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.profile p {
+    opacity: 0;
+    transition: 300ms opacity linear, 300ms transform ease-in-out;
+}
+
+.profile:focus {
+    outline: 0.5rem solid rgb(53, 106, 155);
+    outline-offset: -0.5rem;
+}
+
+.profile:hover :is(h2, p),
+.profile:focus :is(h2, p) {
+    transform: none;
+}
+
+.profile:hover::after,
+.profile:focus::after,
+.profile:hover::before,
+.profile:focus::before {
+    opacity: 0.7;
+}
+
+.profile:hover p,
+.profile:focus p {
+    opacity: 1;
+    transition-delay: 200ms;
+}
+
+.profile:hover img,
+.profile:focus img {
+    filter: grayscale(0);
+    transform: scale(1.05) rotate(1deg);
+}
+
+  /* Remove bullets from list items */
+.auto-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Add margin between list items if needed */
+.auto-grid li {
+    margin-bottom: 10px;
+}
+
+/* Existing code... */
+
+/* Blocks */
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    aspect-ratio: 1/1;
+    position: relative;
+    padding: 1.5rem;
+    color: #ffffff;
+    backface-visibility: hidden;
+    text-decoration: none;
+    overflow: hidden;
+    border: 2px solid #0a0a0a; /* Add border to the profile block */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
+
+.profile::before,
+.profile::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.profile::before {
+    background: linear-gradient(
+        to top,
+        hsla(0, 0%, 6%, 0.79) 0%,
+        hsla(0, 0%, 0%, 0.787) 7.8%,
+        hsl(0 0% 0% / 0.779) 14.4%,
+        hsl(0 0% 0% / 0.765) 20.2%,
+        hsl(0 0% 0% / 0.744) 25.3%,
+        hsl(0 0% 0% / 0.717) 29.9%,
+        hsl(0 0% 0% / 0.683) 34.3%,
+        hsl(0 0% 0% / 0.641) 38.7%,
+        hsl(0 0% 0% / 0.592) 43.3%,
+        hsl(0 0% 0% / 0.534) 48.4%,
+        hsl(0 0% 0% / 0.468) 54.1%,
+        hsl(0 0% 0% / 0.393) 60.6%,
+        hsl(0 0% 0% / 0.31) 68.3%,
+        hsl(0 0% 0% / 0.216) 77.3%,
+        hsl(0 0% 0% / 0.113) 87.7%,
+        hsla(0, 20%, 4%, 0) 100%
+    );
+    transition: 300ms opacity linear;
+}
+
+.profile::after {
+    background: linear-gradient(
+        45deg,
+        hsla(330, 97%, 63%, 0.7) 0,
+        hsla(251, 74%, 49%, 0.932) 100%
+    );
+    opacity: 0;
+    transition: 300ms opacity linear;
+}
+
+/* Existing code... */
+/* NEW CODE TO HEADING */
+
+@font-face {
+    font-family: sans-serif;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  }
+  :root {
+    --main: #ff2483;
+    --main2: #ff65bd;
+    --main3: #6b1839;
+    --white: white;
+  }
